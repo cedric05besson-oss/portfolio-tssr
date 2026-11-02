@@ -1,0 +1,7 @@
+# Fichiers locaux non publiés sur GitHub Pages
+.claude/
+.vscode/
+index-original.html
+README.md
+config.js
+images/exe-*.png
