@@ -329,7 +329,7 @@ a:hover { color: var(--clr-teal); }
   background: linear-gradient(135deg, var(--clr-accent2), var(--clr-teal));
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
-.avatar-photo { width: 100%; height: 100%; object-fit: cover; }
+.avatar-photo { width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; } /* cadré sur le visage */
 .avatar-label { font-family: var(--font-mono); font-size: .78rem; letter-spacing: .15em; color: var(--clr-text-soft); }
 
 .floating-chip {
@@ -575,9 +575,20 @@ section { position: relative; padding: 6.5rem 0; }
   width: 16px; height: 16px; border-radius: 50%;
   border: 3px solid var(--clr-bg2);
 }
-.dot-it         { background: var(--clr-accent2); box-shadow: 0 0 0 2px var(--clr-accent2), 0 0 14px var(--clr-accent2); }
-.dot-formation  { background: var(--clr-teal);    box-shadow: 0 0 0 2px var(--clr-teal); }
-.dot-management { background: var(--clr-wine2);   box-shadow: 0 0 0 2px var(--clr-wine2); }
+/* Code couleur : bleu pétrole = postes occupés · rouge bordeaux = diplômes & certifications */
+.dot-it,
+.dot-management { background: var(--clr-accent2); box-shadow: 0 0 0 2px var(--clr-accent2), 0 0 12px rgba(var(--accent-rgb),.6); }
+.dot-formation  { background: var(--clr-wine2);   box-shadow: 0 0 0 2px var(--clr-wine2), 0 0 12px rgba(176,42,82,.6); }
+
+/* Légende sous les filtres */
+.timeline-legend {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 1.4rem;
+  margin: -1.8rem 0 2.6rem; font-family: var(--font-mono); font-size: .8rem; color: var(--clr-text-soft);
+}
+.timeline-legend span { display: inline-flex; align-items: center; gap: .45rem; }
+.timeline-legend i { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+.legend-job  { background: var(--clr-accent2); }
+.legend-cert { background: var(--clr-wine2); }
 
 .timeline-date { font-family: var(--font-mono); font-size: .82rem; color: var(--clr-accent2); margin-bottom: .3rem; }
 .timeline-title { font-family: var(--font-display); font-weight: 700; font-size: 1.2rem; color: var(--clr-heading); margin-bottom: .3rem; }

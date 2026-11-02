@@ -36,9 +36,8 @@
     label.textContent = dark ? 'Mode clair' : 'Mode sombre';
   }
 
-  // Thème enregistré, sinon préférence du système
-  const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
-  apply(load() || (prefersLight ? 'light' : 'dark'));
+  // Mode sombre par défaut ; le choix du visiteur (bouton) est mémorisé ensuite
+  apply(load() || 'dark');
 
   btn.addEventListener('click', function () {
     const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';

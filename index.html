@@ -8,7 +8,8 @@
     • style.css   → mise en forme, thèmes clair/sombre, responsive
     • script.js   → interactions (thème, menu, animations, filtres)
   Ancienne version du cours conservée dans : index-original.html
-  Toutes les données proviennent du CV : ressources/CV_2026-10-22_Cédric_BESSON.pdf
+  Le CV est disponible en version web (cv.html + cv.css) et en PDF (ressources/CV_Cedric_BESSON_TSSR.pdf,
+  généré à partir de cv.html : ouvrir cv.html → Ctrl + P → « Enregistrer au format PDF »).
   ============================================================
 -->
 <html lang="fr" data-theme="dark">
@@ -18,7 +19,7 @@
 
   <!-- ===== SEO ===== -->
   <meta name="description" content="Portfolio de Cédric Besson – Technicien Supérieur Systèmes et Réseaux (TSSR). Administration Windows Server / Active Directory, réseaux & sécurité (VLAN, pfSense, Stormshield, VPN), PowerShell. Recherche un poste en Support N2, Exploitation & Supervision dans le Var ou en télétravail." />
-  <meta name="keywords" content="TSSR, administrateur systèmes et réseaux, support N2, exploitation, supervision, assistant RSSI, Active Directory, GPO, Windows Server, pfSense, Stormshield, PowerShell, Var, Toulon, Six-Fours-les-Plages, Hyères" />
+  <meta name="keywords" content="TSSR, administrateur systèmes et réseaux, support N2, exploitation, supervision, assistant RSSI, Active Directory, GPO, Windows Server, pfSense, Stormshield, PowerShell, Var, Toulon, Hyères" />
   <meta name="author" content="Cédric Besson" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#071419" />
@@ -117,7 +118,7 @@
             <!-- Badge de disponibilité : à mettre à jour selon ta situation -->
             <p class="status-badge">
               <span class="status-dot" aria-hidden="true"></span>
-              Disponible mi-décembre 2026 · Var ou télétravail
+              Disponible mi-décembre 2026 · Hyères, France
             </p>
 
             <h1 id="hero-title" class="hero-title">Cédric <span class="accent">Besson</span></h1>
@@ -136,9 +137,9 @@
             </p>
 
             <div class="d-flex flex-wrap gap-3">
-              <!-- Le nom de fichier contient un « é » : il est encodé (%C3%A9) pour fonctionner partout -->
-              <a href="ressources/CV_2026-10-22_C%C3%A9dric_BESSON.pdf" class="btn-main" download="CV_Cedric_BESSON_TSSR.pdf">
-                <i class="fas fa-download" aria-hidden="true"></i> Télécharger mon CV
+              <!-- Ouvre le CV en ligne (cv.html) ; le PDF se télécharge depuis cette page -->
+              <a href="cv.html" class="btn-main" target="_blank" rel="noopener">
+                <i class="fas fa-file-lines" aria-hidden="true"></i> Voir mon CV
               </a>
               <a href="#contact" class="btn-ghost">
                 <i class="fas fa-paper-plane" aria-hidden="true"></i> Me contacter
@@ -159,8 +160,8 @@
             <div class="hero-avatar-ring reveal reveal-right">
               <span class="orbit" aria-hidden="true"><span class="orbit-dot"></span></span>
               <div class="hero-avatar">
-                <span class="avatar-initials" aria-hidden="true">CB</span>
-                <span class="avatar-label">TSSR · SYS &amp; NET</span>
+                <!-- Photo : images/photo.jpg (pour la changer, remplacer ce fichier) -->
+                <img src="images/photo.jpg" alt="Photo de Cédric Besson" class="avatar-photo" width="330" height="330" />
               </div>
               <span class="floating-chip chip-1" aria-hidden="true"><i class="fab fa-windows"></i> Active Directory</span>
               <span class="floating-chip chip-2" aria-hidden="true"><i class="fas fa-shield-halved"></i> pfSense</span>
@@ -212,7 +213,7 @@
             </div>
 
             <ul class="about-info-grid" aria-label="Informations pratiques">
-              <li><i class="fas fa-location-dot" aria-hidden="true"></i>Six-Fours-les-Plages / Hyères (83)</li>
+              <li><i class="fas fa-location-dot" aria-hidden="true"></i>Hyères (83400), France</li>
               <li><i class="fas fa-laptop-house" aria-hidden="true"></i>Télétravail ou présentiel</li>
               <li><i class="fas fa-calendar-check" aria-hidden="true"></i>Disponible mi-décembre 2026</li>
               <li><i class="fas fa-car" aria-hidden="true"></i>Permis B &amp; AM · Véhiculé</li>
@@ -375,6 +376,12 @@
           <button type="button" class="filter-btn" data-filter="formation" aria-pressed="false"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Formations</button>
           <button type="button" class="filter-btn" data-filter="management" aria-pressed="false"><i class="fas fa-briefcase" aria-hidden="true"></i> Management</button>
         </div>
+
+        <!-- Légende du code couleur des pastilles -->
+        <p class="timeline-legend reveal">
+          <span><i class="legend-job" aria-hidden="true"></i>Postes occupés</span>
+          <span><i class="legend-cert" aria-hidden="true"></i>Diplômes &amp; certifications</span>
+        </p>
 
         <div class="timeline">
 
@@ -625,7 +632,7 @@
           </div>
           <div class="d-flex flex-wrap gap-3">
             <a href="#contact" class="btn-light"><i class="fas fa-paper-plane" aria-hidden="true"></i> Me contacter</a>
-            <a href="ressources/CV_2026-10-22_C%C3%A9dric_BESSON.pdf" class="btn-outline-light" download="CV_Cedric_BESSON_TSSR.pdf"><i class="fas fa-download" aria-hidden="true"></i> CV PDF</a>
+            <a href="cv.html" class="btn-outline-light" target="_blank" rel="noopener"><i class="fas fa-file-lines" aria-hidden="true"></i> Voir le CV</a>
           </div>
         </div>
       </div>
@@ -662,10 +669,10 @@
                 </li>
                 <li>
                   <span class="ico" aria-hidden="true"><i class="fas fa-location-dot"></i></span>
-                  <div><small>Zone</small>Var (83) · Télétravail possible</div>
+                  <div><small>Localisation</small>Hyères (83400), France · Télétravail possible</div>
                 </li>
               </ul>
-              <a href="ressources/CV_2026-10-22_C%C3%A9dric_BESSON.pdf" class="btn-main w-100 justify-content-center mt-4" download="CV_Cedric_BESSON_TSSR.pdf">
+              <a href="ressources/CV_Cedric_BESSON_TSSR.pdf" class="btn-main w-100 justify-content-center mt-4" download>
                 <i class="fas fa-file-pdf" aria-hidden="true"></i> Télécharger le CV (PDF)
               </a>
             </div>
